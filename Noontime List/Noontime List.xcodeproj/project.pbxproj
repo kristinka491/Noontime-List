@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8E4E669229701BDE00FD19FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E669129701BDE00FD19FC /* AppDelegate.swift */; };
-		8E4E669429701BDE00FD19FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E669329701BDE00FD19FC /* SceneDelegate.swift */; };
 		8E4E669629701BDE00FD19FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E669529701BDE00FD19FC /* ViewController.swift */; };
 		8E4E669929701BDE00FD19FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E669729701BDE00FD19FC /* Main.storyboard */; };
 		8E4E669C29701BDE00FD19FC /* Noontime_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E669A29701BDE00FD19FC /* Noontime_List.xcdatamodeld */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		8E4E668E29701BDE00FD19FC /* Noontime List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Noontime List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4E669129701BDE00FD19FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E4E669329701BDE00FD19FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8E4E669529701BDE00FD19FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E4E669829701BDE00FD19FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E4E669B29701BDE00FD19FC /* Noontime_List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Noontime_List.xcdatamodel; sourceTree = "<group>"; };
@@ -58,16 +56,39 @@
 		8E4E669029701BDE00FD19FC /* Noontime List */ = {
 			isa = PBXGroup;
 			children = (
+				8E4E66AA29701E2500FD19FC /* Screens */,
+				8E4E66A829701D5100FD19FC /* App */,
+			);
+			path = "Noontime List";
+			sourceTree = "<group>";
+		};
+		8E4E66A829701D5100FD19FC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8E4E66A929701DD000FD19FC /* Resource */,
 				8E4E669129701BDE00FD19FC /* AppDelegate.swift */,
-				8E4E669329701BDE00FD19FC /* SceneDelegate.swift */,
-				8E4E669529701BDE00FD19FC /* ViewController.swift */,
-				8E4E669729701BDE00FD19FC /* Main.storyboard */,
-				8E4E669D29701BE100FD19FC /* Assets.xcassets */,
 				8E4E669F29701BE100FD19FC /* LaunchScreen.storyboard */,
 				8E4E66A229701BE100FD19FC /* Info.plist */,
 				8E4E669A29701BDE00FD19FC /* Noontime_List.xcdatamodeld */,
 			);
-			path = "Noontime List";
+			path = App;
+			sourceTree = "<group>";
+		};
+		8E4E66A929701DD000FD19FC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8E4E669D29701BE100FD19FC /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8E4E66AA29701E2500FD19FC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8E4E669529701BDE00FD19FC /* ViewController.swift */,
+				8E4E669729701BDE00FD19FC /* Main.storyboard */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,7 +165,6 @@
 				8E4E669629701BDE00FD19FC /* ViewController.swift in Sources */,
 				8E4E669229701BDE00FD19FC /* AppDelegate.swift in Sources */,
 				8E4E669C29701BDE00FD19FC /* Noontime_List.xcdatamodeld in Sources */,
-				8E4E669429701BDE00FD19FC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
