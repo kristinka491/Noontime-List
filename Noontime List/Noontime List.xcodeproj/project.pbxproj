@@ -89,6 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				8E4E66AB2970207300FD19FC /* Onboarding */,
+				8E4E66B429702F8900FD19FC /* Tabbar */,
+				8E4E66B529702F9E00FD19FC /* HomePlanner */,
+				8E4E66B629702FAB00FD19FC /* HomeHabits */,
+				8E4E66B729702FB800FD19FC /* HomeNotes */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -148,6 +152,34 @@
 				8E4E66B22970280400FD19FC /* UINavigation+ViewControllerExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8E4E66B429702F8900FD19FC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		8E4E66B529702F9E00FD19FC /* HomePlanner */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomePlanner;
+			sourceTree = "<group>";
+		};
+		8E4E66B629702FAB00FD19FC /* HomeHabits */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeHabits;
+			sourceTree = "<group>";
+		};
+		8E4E66B729702FB800FD19FC /* HomeNotes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeNotes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
