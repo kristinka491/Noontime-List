@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.showScreen(with: "HelloScreen", viewControllerName: "HelloScreen")
+        setUpStartScreen()
         return true
     }
 
@@ -27,6 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+
+    private func setUpStartScreen() {
+        if UserDefaults.standard.bool(forKey: UserDefaultsKeys.isUserOnboarded) {
+            self.showScreen(with: "TabbarScreen", viewControllerName: "TabbarScreen")
+        } else {
+            self.showScreen(with: "HelloScreen", viewControllerName: "HelloScreen")
+        }
     }
 }
 

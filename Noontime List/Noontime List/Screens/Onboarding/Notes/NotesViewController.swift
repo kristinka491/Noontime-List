@@ -20,7 +20,7 @@ class NotesViewController: UIViewController {
     }
 
     @IBAction private func tappedGetStartedButton(_ sender:  UIButton) {
-        let controller = viewController(storyboardName: "HomePlannerScreen", identifier: "HomePlannerScreen")
+        let controller = viewController(storyboardName: "TabbarScreen", identifier: "TabbarScreen")
         navigationController?.pushViewController(controller, animated: true)
         userDefaults.set(true, forKey: UserDefaultsKeys.isUserOnboarded)
     }

@@ -21,6 +21,14 @@
 		8E4E66C12970370000FD19FC /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66C02970370000FD19FC /* NotesViewController.swift */; };
 		8E4E66C32970370F00FD19FC /* NotesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66C22970370F00FD19FC /* NotesScreen.storyboard */; };
 		8E4E66C629703A7000FD19FC /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66C529703A7000FD19FC /* UserDefaultsKeys.swift */; };
+		8E4E66C829703B9F00FD19FC /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66C729703B9F00FD19FC /* TabbarViewController.swift */; };
+		8E4E66CC29703D2800FD19FC /* HomePlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66CB29703D2800FD19FC /* HomePlannerViewController.swift */; };
+		8E4E66CE29703D3800FD19FC /* HomePlannerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66CD29703D3800FD19FC /* HomePlannerScreen.storyboard */; };
+		8E4E66D029703D5900FD19FC /* HomeHabitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66CF29703D5900FD19FC /* HomeHabitsViewController.swift */; };
+		8E4E66D229703D6B00FD19FC /* HomeHabitsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66D129703D6B00FD19FC /* HomeHabitsScreen.storyboard */; };
+		8E4E66D429703D8800FD19FC /* HomeNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66D329703D8800FD19FC /* HomeNotesViewController.swift */; };
+		8E4E66D629703D9C00FD19FC /* HomeNotesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66D529703D9C00FD19FC /* HomeNotesScreen.storyboard */; };
+		8E4E66D82970411C00FD19FC /* TabbarScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66D72970411C00FD19FC /* TabbarScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +48,14 @@
 		8E4E66C02970370000FD19FC /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		8E4E66C22970370F00FD19FC /* NotesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesScreen.storyboard; sourceTree = "<group>"; };
 		8E4E66C529703A7000FD19FC /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		8E4E66C729703B9F00FD19FC /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		8E4E66CB29703D2800FD19FC /* HomePlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlannerViewController.swift; sourceTree = "<group>"; };
+		8E4E66CD29703D3800FD19FC /* HomePlannerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePlannerScreen.storyboard; sourceTree = "<group>"; };
+		8E4E66CF29703D5900FD19FC /* HomeHabitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHabitsViewController.swift; sourceTree = "<group>"; };
+		8E4E66D129703D6B00FD19FC /* HomeHabitsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeHabitsScreen.storyboard; sourceTree = "<group>"; };
+		8E4E66D329703D8800FD19FC /* HomeNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotesViewController.swift; sourceTree = "<group>"; };
+		8E4E66D529703D9C00FD19FC /* HomeNotesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeNotesScreen.storyboard; sourceTree = "<group>"; };
+		8E4E66D72970411C00FD19FC /* TabbarScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabbarScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +194,8 @@
 		8E4E66B429702F8900FD19FC /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				8E4E66C729703B9F00FD19FC /* TabbarViewController.swift */,
+				8E4E66D72970411C00FD19FC /* TabbarScreen.storyboard */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -185,6 +203,8 @@
 		8E4E66B529702F9E00FD19FC /* HomePlanner */ = {
 			isa = PBXGroup;
 			children = (
+				8E4E66CB29703D2800FD19FC /* HomePlannerViewController.swift */,
+				8E4E66CD29703D3800FD19FC /* HomePlannerScreen.storyboard */,
 			);
 			path = HomePlanner;
 			sourceTree = "<group>";
@@ -192,6 +212,8 @@
 		8E4E66B629702FAB00FD19FC /* HomeHabits */ = {
 			isa = PBXGroup;
 			children = (
+				8E4E66CF29703D5900FD19FC /* HomeHabitsViewController.swift */,
+				8E4E66D129703D6B00FD19FC /* HomeHabitsScreen.storyboard */,
 			);
 			path = HomeHabits;
 			sourceTree = "<group>";
@@ -199,6 +221,8 @@
 		8E4E66B729702FB800FD19FC /* HomeNotes */ = {
 			isa = PBXGroup;
 			children = (
+				8E4E66D329703D8800FD19FC /* HomeNotesViewController.swift */,
+				8E4E66D529703D9C00FD19FC /* HomeNotesScreen.storyboard */,
 			);
 			path = HomeNotes;
 			sourceTree = "<group>";
@@ -270,11 +294,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E4E66C32970370F00FD19FC /* NotesScreen.storyboard in Resources */,
+				8E4E66D229703D6B00FD19FC /* HomeHabitsScreen.storyboard in Resources */,
+				8E4E66D82970411C00FD19FC /* TabbarScreen.storyboard in Resources */,
 				8E4E66A129701BE100FD19FC /* LaunchScreen.storyboard in Resources */,
 				8E4E669E29701BE100FD19FC /* Assets.xcassets in Resources */,
+				8E4E66CE29703D3800FD19FC /* HomePlannerScreen.storyboard in Resources */,
 				8E4E66BF2970343F00FD19FC /* HabitsScreen.storyboard in Resources */,
 				8E4E669929701BDE00FD19FC /* HelloScreen.storyboard in Resources */,
 				8E4E66BB2970300C00FD19FC /* PlannerScreen.storyboard in Resources */,
+				8E4E66D629703D9C00FD19FC /* HomeNotesScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +318,13 @@
 				8E4E66BD2970343100FD19FC /* HabitsViewController.swift in Sources */,
 				8E4E669229701BDE00FD19FC /* AppDelegate.swift in Sources */,
 				8E4E66C12970370000FD19FC /* NotesViewController.swift in Sources */,
+				8E4E66D429703D8800FD19FC /* HomeNotesViewController.swift in Sources */,
 				8E4E66B929702FFF00FD19FC /* PlannerViewController.swift in Sources */,
 				8E4E66B32970280400FD19FC /* UINavigation+ViewControllerExtension.swift in Sources */,
+				8E4E66D029703D5900FD19FC /* HomeHabitsViewController.swift in Sources */,
 				8E4E669C29701BDE00FD19FC /* Noontime_List.xcdatamodeld in Sources */,
+				8E4E66CC29703D2800FD19FC /* HomePlannerViewController.swift in Sources */,
+				8E4E66C829703B9F00FD19FC /* TabbarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
