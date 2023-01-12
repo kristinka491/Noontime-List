@@ -14,6 +14,8 @@
 		8E4E669E29701BE100FD19FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E669D29701BE100FD19FC /* Assets.xcassets */; };
 		8E4E66A129701BE100FD19FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E669F29701BE100FD19FC /* LaunchScreen.storyboard */; };
 		8E4E66B32970280400FD19FC /* UINavigation+ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66B22970280400FD19FC /* UINavigation+ViewControllerExtension.swift */; };
+		8E4E66B929702FFF00FD19FC /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66B829702FFF00FD19FC /* PlannerViewController.swift */; };
+		8E4E66BB2970300C00FD19FC /* PlannerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66BA2970300C00FD19FC /* PlannerScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8E4E66A029701BE100FD19FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E4E66A229701BE100FD19FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4E66B22970280400FD19FC /* UINavigation+ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigation+ViewControllerExtension.swift"; sourceTree = "<group>"; };
+		8E4E66B829702FFF00FD19FC /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
+		8E4E66BA2970300C00FD19FC /* PlannerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlannerScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 		8E4E66AD297020A200FD19FC /* Planner  */ = {
 			isa = PBXGroup;
 			children = (
+				8E4E66B829702FFF00FD19FC /* PlannerViewController.swift */,
+				8E4E66BA2970300C00FD19FC /* PlannerScreen.storyboard */,
 			);
 			path = "Planner ";
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 				8E4E66A129701BE100FD19FC /* LaunchScreen.storyboard in Resources */,
 				8E4E669E29701BE100FD19FC /* Assets.xcassets in Resources */,
 				8E4E669929701BDE00FD19FC /* HelloScreen.storyboard in Resources */,
+				8E4E66BB2970300C00FD19FC /* PlannerScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +262,7 @@
 			files = (
 				8E4E669629701BDE00FD19FC /* HelloViewController.swift in Sources */,
 				8E4E669229701BDE00FD19FC /* AppDelegate.swift in Sources */,
+				8E4E66B929702FFF00FD19FC /* PlannerViewController.swift in Sources */,
 				8E4E66B32970280400FD19FC /* UINavigation+ViewControllerExtension.swift in Sources */,
 				8E4E669C29701BDE00FD19FC /* Noontime_List.xcdatamodeld in Sources */,
 			);

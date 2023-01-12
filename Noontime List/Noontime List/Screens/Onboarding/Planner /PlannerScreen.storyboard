@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Planner View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PlannerScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PlannerViewController" customModule="Noontime_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlannerScreen" translatesAutoresizingMaskIntoConstraints="NO" id="lRa-VK-lqu">
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lRa-VK-lqu" secondAttribute="height" multiplier="1:1" id="ANK-dS-331"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noontime List helps you to create and track your daily tasks, don't worry, we will remind you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPG-4L-c39">
+                                <rect key="frame" x="20" y="562.5" width="374" height="83.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Z3W-xv-Jsy">
+                                <rect key="frame" x="20" y="686" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dr-gR-dSF">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="JDN-o4-PNN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="SKIP">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedSkipButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fwC-Ma-4As"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tK6-Iz-NMG">
+                                        <rect key="frame" x="191" y="0.0" width="183" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="NEXT"/>
+                                        <connections>
+                                            <action selector="tappedNextButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5JD-2N-Xkn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track your tasks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1K-le-8MC">
+                                <rect key="frame" x="20" y="488" width="374" height="44.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Z3W-xv-Jsy" secondAttribute="trailing" constant="20" id="3Vc-rS-O3S"/>
+                            <constraint firstItem="Z3W-xv-Jsy" firstAttribute="top" secondItem="jPG-4L-c39" secondAttribute="bottom" constant="40" id="4yK-8b-FM1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Z3W-xv-Jsy" secondAttribute="bottom" constant="16" id="QQg-L3-SJ8"/>
+                            <constraint firstItem="jPG-4L-c39" firstAttribute="top" secondItem="Q1K-le-8MC" secondAttribute="bottom" constant="30" id="Xtw-78-yZf"/>
+                            <constraint firstItem="lRa-VK-lqu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="ZyI-H5-ECG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Q1K-le-8MC" secondAttribute="trailing" constant="20" id="exM-t8-Hvq"/>
+                            <constraint firstItem="Q1K-le-8MC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="jeo-n5-khX"/>
+                            <constraint firstItem="Z3W-xv-Jsy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="oh5-tX-q7O"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lRa-VK-lqu" secondAttribute="trailing" id="ohj-Jm-tCL"/>
+                            <constraint firstItem="Q1K-le-8MC" firstAttribute="top" secondItem="lRa-VK-lqu" secondAttribute="bottom" constant="10" id="qTH-Ox-BjH"/>
+                            <constraint firstItem="jPG-4L-c39" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="vaf-Fz-QF1"/>
+                            <constraint firstItem="lRa-VK-lqu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vqh-Uq-xTU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jPG-4L-c39" secondAttribute="trailing" constant="20" id="xPh-GZ-RW2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="tK6-Iz-NMG" id="iwX-CL-UaK"/>
+                        <outlet property="skipButton" destination="0dr-gR-dSF" id="Dnf-DL-eTC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="68"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PlannerScreen" width="561" height="400"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

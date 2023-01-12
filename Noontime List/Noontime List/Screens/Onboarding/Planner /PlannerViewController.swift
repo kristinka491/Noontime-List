@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlannerViewController.swift
 //  Noontime List
 //
 //  Created by Vlad Birukov on 12.01.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HelloViewController: UIViewController {
+class PlannerViewController: UIViewController {
 
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
@@ -15,6 +15,7 @@ class HelloViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpButton()
+        navigationController?.navigationBar.isHidden = true
     }
 
     @IBAction private func tappedSkipButton(_ sender:  UIButton) {
@@ -23,7 +24,7 @@ class HelloViewController: UIViewController {
     }
 
     @IBAction private func tappedNextButton(_ sender:  UIButton) {
-        let controller = viewController(storyboardName: "PlannerScreen", identifier: "PlannerScreen")
+        let controller = viewController(storyboardName: "HabitsScreen", identifier: "HabitsScreen")
         navigationController?.pushViewController(controller, animated: true)
     }
 
@@ -34,4 +35,3 @@ class HelloViewController: UIViewController {
         nextButton.layer.cornerRadius = 20
     }
 }
-
