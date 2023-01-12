@@ -12,6 +12,8 @@ class HabitsViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
 
+    private let userDefaults = UserDefaults.standard
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpButton()
@@ -20,6 +22,7 @@ class HabitsViewController: UIViewController {
     @IBAction private func tappedSkipButton(_ sender:  UIButton) {
         let controller = viewController(storyboardName: "HomePlannerScreen", identifier: "HomePlannerScreen")
         navigationController?.pushViewController(controller, animated: true)
+        userDefaults.set(true, forKey: UserDefaultsKeys.isUserOnboarded)
     }
 
     @IBAction private func tappedNextButton(_ sender:  UIButton) {

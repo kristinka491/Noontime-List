@@ -11,6 +11,8 @@ class NotesViewController: UIViewController {
 
     @IBOutlet weak var getStartedButton: UIButton!
 
+    private let userDefaults = UserDefaults.standard
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
@@ -20,6 +22,7 @@ class NotesViewController: UIViewController {
     @IBAction private func tappedGetStartedButton(_ sender:  UIButton) {
         let controller = viewController(storyboardName: "HomePlannerScreen", identifier: "HomePlannerScreen")
         navigationController?.pushViewController(controller, animated: true)
+        userDefaults.set(true, forKey: UserDefaultsKeys.isUserOnboarded)
     }
 
     private func setUpButton() {

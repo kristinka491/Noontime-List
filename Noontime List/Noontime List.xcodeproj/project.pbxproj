@@ -20,6 +20,7 @@
 		8E4E66BF2970343F00FD19FC /* HabitsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66BE2970343F00FD19FC /* HabitsScreen.storyboard */; };
 		8E4E66C12970370000FD19FC /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66C02970370000FD19FC /* NotesViewController.swift */; };
 		8E4E66C32970370F00FD19FC /* NotesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66C22970370F00FD19FC /* NotesScreen.storyboard */; };
+		8E4E66C629703A7000FD19FC /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66C529703A7000FD19FC /* UserDefaultsKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8E4E66BE2970343F00FD19FC /* HabitsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitsScreen.storyboard; sourceTree = "<group>"; };
 		8E4E66C02970370000FD19FC /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		8E4E66C22970370F00FD19FC /* NotesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotesScreen.storyboard; sourceTree = "<group>"; };
+		8E4E66C529703A7000FD19FC /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		8E4E66B0297027E600FD19FC /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				8E4E66C429703A4F00FD19FC /* Type */,
 				8E4E66B1297027F500FD19FC /* Extension */,
 			);
 			path = Helper;
@@ -198,6 +201,14 @@
 			children = (
 			);
 			path = HomeNotes;
+			sourceTree = "<group>";
+		};
+		8E4E66C429703A4F00FD19FC /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				8E4E66C529703A7000FD19FC /* UserDefaultsKeys.swift */,
+			);
+			path = Type;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4E66C629703A7000FD19FC /* UserDefaultsKeys.swift in Sources */,
 				8E4E669629701BDE00FD19FC /* HelloViewController.swift in Sources */,
 				8E4E66BD2970343100FD19FC /* HabitsViewController.swift in Sources */,
 				8E4E669229701BDE00FD19FC /* AppDelegate.swift in Sources */,
