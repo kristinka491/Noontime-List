@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notes View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="NotesScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="NotesViewController" customModule="Noontime_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotesScreen" translatesAutoresizingMaskIntoConstraints="NO" id="z9B-U9-Dme">
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="z9B-U9-Dme" secondAttribute="height" multiplier="1:1" id="1kZ-Tt-4OX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make your notes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELo-RD-x8O">
+                                <rect key="frame" x="20" y="488" width="374" height="44.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our app gives you an ability to make notes. Note everything important not to forget." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf4-aw-4bU">
+                                <rect key="frame" x="40" y="562.5" width="334" height="83.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8e-bx-c6T">
+                                <rect key="frame" x="20" y="686" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sX7-0D-viy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedGetStartedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cQo-Cr-H3E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z9B-U9-Dme" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="3d1-oj-19l"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="u8e-bx-c6T" secondAttribute="bottom" constant="10" id="6u2-7Y-75T"/>
+                            <constraint firstItem="cf4-aw-4bU" firstAttribute="top" secondItem="ELo-RD-x8O" secondAttribute="bottom" constant="30" id="DiJ-3F-lrY"/>
+                            <constraint firstItem="ELo-RD-x8O" firstAttribute="top" secondItem="z9B-U9-Dme" secondAttribute="bottom" constant="10" id="L1A-uH-kdB"/>
+                            <constraint firstItem="u8e-bx-c6T" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="LF5-2O-DX2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cf4-aw-4bU" secondAttribute="trailing" constant="40" id="P7n-Nu-diA"/>
+                            <constraint firstItem="u8e-bx-c6T" firstAttribute="top" secondItem="cf4-aw-4bU" secondAttribute="bottom" constant="40" id="R9i-Ib-2Yb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="z9B-U9-Dme" secondAttribute="trailing" id="eXx-Ex-xGo"/>
+                            <constraint firstItem="z9B-U9-Dme" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ijt-Cf-tvk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ELo-RD-x8O" secondAttribute="trailing" constant="20" id="kTs-5a-QT8"/>
+                            <constraint firstItem="cf4-aw-4bU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="m66-KO-dKN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="u8e-bx-c6T" secondAttribute="trailing" constant="20" id="uHh-YE-58T"/>
+                            <constraint firstItem="ELo-RD-x8O" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="y6h-hl-ROE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getStartedButton" destination="u8e-bx-c6T" id="hD2-Ya-3PZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NotesScreen" width="487" height="442"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
