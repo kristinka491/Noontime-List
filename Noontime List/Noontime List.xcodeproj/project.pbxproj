@@ -16,6 +16,8 @@
 		8E4E66B32970280400FD19FC /* UINavigation+ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66B22970280400FD19FC /* UINavigation+ViewControllerExtension.swift */; };
 		8E4E66B929702FFF00FD19FC /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66B829702FFF00FD19FC /* PlannerViewController.swift */; };
 		8E4E66BB2970300C00FD19FC /* PlannerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66BA2970300C00FD19FC /* PlannerScreen.storyboard */; };
+		8E4E66BD2970343100FD19FC /* HabitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66BC2970343100FD19FC /* HabitsViewController.swift */; };
+		8E4E66BF2970343F00FD19FC /* HabitsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66BE2970343F00FD19FC /* HabitsScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8E4E66B22970280400FD19FC /* UINavigation+ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigation+ViewControllerExtension.swift"; sourceTree = "<group>"; };
 		8E4E66B829702FFF00FD19FC /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 		8E4E66BA2970300C00FD19FC /* PlannerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlannerScreen.storyboard; sourceTree = "<group>"; };
+		8E4E66BC2970343100FD19FC /* HabitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewController.swift; sourceTree = "<group>"; };
+		8E4E66BE2970343F00FD19FC /* HabitsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitsScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 		8E4E66AE297020AF00FD19FC /* Habits */ = {
 			isa = PBXGroup;
 			children = (
+				8E4E66BC2970343100FD19FC /* HabitsViewController.swift */,
+				8E4E66BE2970343F00FD19FC /* HabitsScreen.storyboard */,
 			);
 			path = Habits;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 			files = (
 				8E4E66A129701BE100FD19FC /* LaunchScreen.storyboard in Resources */,
 				8E4E669E29701BE100FD19FC /* Assets.xcassets in Resources */,
+				8E4E66BF2970343F00FD19FC /* HabitsScreen.storyboard in Resources */,
 				8E4E669929701BDE00FD19FC /* HelloScreen.storyboard in Resources */,
 				8E4E66BB2970300C00FD19FC /* PlannerScreen.storyboard in Resources */,
 			);
@@ -261,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E4E669629701BDE00FD19FC /* HelloViewController.swift in Sources */,
+				8E4E66BD2970343100FD19FC /* HabitsViewController.swift in Sources */,
 				8E4E669229701BDE00FD19FC /* AppDelegate.swift in Sources */,
 				8E4E66B929702FFF00FD19FC /* PlannerViewController.swift in Sources */,
 				8E4E66B32970280400FD19FC /* UINavigation+ViewControllerExtension.swift in Sources */,
