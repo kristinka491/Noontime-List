@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,9 +16,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HelloScreen" translatesAutoresizingMaskIntoConstraints="NO" id="yI8-ZZ-eMj">
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yI8-ZZ-eMj" secondAttribute="height" multiplier="1:1" id="JBg-Rt-rDL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are happy to see you here!  Now you could check how we could work together." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXd-bb-uUN">
+                                <rect key="frame" x="20" y="562.5" width="374" height="80"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LsY-Kv-V9X">
+                                <rect key="frame" x="20" y="682.5" width="374" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4g-wj-qnN">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="C7N-qN-fBd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="SKIP">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedSkipButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4re-DJ-UNY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdG-Z5-lbd">
+                                        <rect key="frame" x="191" y="0.0" width="183" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="NEXT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLN-rE-I9x"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Dear!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHG-yV-XE6">
+                                <rect key="frame" x="20" y="488" width="374" height="44.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cHG-yV-XE6" secondAttribute="trailing" constant="20" id="0TV-e3-kT0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LsY-Kv-V9X" secondAttribute="trailing" constant="20" id="1cs-i0-mlU"/>
+                            <constraint firstItem="yI8-ZZ-eMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6FE-t6-Bup"/>
+                            <constraint firstItem="LsY-Kv-V9X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CKI-Qr-fvT"/>
+                            <constraint firstItem="WXd-bb-uUN" firstAttribute="top" secondItem="cHG-yV-XE6" secondAttribute="bottom" constant="30" id="EPr-Gq-zbk"/>
+                            <constraint firstItem="cHG-yV-XE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nbd-6a-4D6"/>
+                            <constraint firstItem="cHG-yV-XE6" firstAttribute="top" secondItem="yI8-ZZ-eMj" secondAttribute="bottom" constant="10" id="OUv-3G-ybx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LsY-Kv-V9X" secondAttribute="bottom" constant="16" id="ShA-E9-8f3"/>
+                            <constraint firstItem="LsY-Kv-V9X" firstAttribute="top" secondItem="WXd-bb-uUN" secondAttribute="bottom" constant="40" id="XEf-iK-4wL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yI8-ZZ-eMj" secondAttribute="trailing" id="YHO-JT-cha"/>
+                            <constraint firstItem="yI8-ZZ-eMj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="n5g-TR-eCp"/>
+                            <constraint firstAttribute="trailing" secondItem="WXd-bb-uUN" secondAttribute="trailing" constant="20" id="r0h-bA-cJv"/>
+                            <constraint firstItem="WXd-bb-uUN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="svf-hh-uph"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="QdG-Z5-lbd" id="IQL-cG-Nfj"/>
+                        <outlet property="skipButton" destination="G4g-wj-qnN" id="sH1-gt-Qe6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,8 +96,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HelloScreen" width="445" height="494"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
