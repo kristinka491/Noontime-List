@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setUpNavigationBar()
         setUpStartScreen()
         return true
     }
@@ -35,6 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             self.showScreen(with: "HelloScreen", viewControllerName: "HelloScreen")
         }
+    }
+
+    private func setUpNavigationBar() {
+        UINavigationBar.appearance().tintColor = .black
     }
 }
 

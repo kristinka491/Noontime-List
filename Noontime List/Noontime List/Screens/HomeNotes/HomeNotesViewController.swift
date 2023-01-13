@@ -12,4 +12,9 @@ class HomeNotesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBAction private func tappedAddButton(_ sender: UIButton) {
+        let controller = viewController(storyboardName: "AddNoteScreen", identifier: "AddNoteScreen")
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }

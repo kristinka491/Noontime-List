@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -15,8 +15,26 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcE-0A-bhG">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GSd-LY-l1d"/>
+                                    <constraint firstAttribute="width" secondItem="AcE-0A-bhG" secondAttribute="height" multiplier="1:1" id="yJM-Ca-aqL"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="AddButton"/>
+                                <connections>
+                                    <action selector="tappedAddButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h7B-FP-uhP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AcE-0A-bhG" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="E5h-Hp-ead"/>
+                            <constraint firstItem="AcE-0A-bhG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bG9-Ok-yQB"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notes" image="note" catalog="system" id="Nnu-6P-oJY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -27,6 +45,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AddButton" width="256" height="256"/>
         <image name="note" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
