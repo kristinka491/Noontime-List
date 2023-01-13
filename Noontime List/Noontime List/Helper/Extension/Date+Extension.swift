@@ -8,9 +8,16 @@
 import UIKit
 
 extension Date {
-   func getFormattedDate(format: String) -> String {
+
+    func getStringFromDate(format: String) -> String {
         let dateformat = DateFormatter()
         dateformat.dateFormat = format
         return dateformat.string(from: self)
+    }
+
+    func getDateFromString(dateString: String, format: String) -> Date {
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = format
+        return dateformat.date(from: dateString) ?? Date()
     }
 }

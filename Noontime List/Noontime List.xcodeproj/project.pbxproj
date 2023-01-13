@@ -33,6 +33,9 @@
 		8E4E66DF2971599900FD19FC /* AddNoteScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66DE2971599900FD19FC /* AddNoteScreen.storyboard */; };
 		8E4E66E129716E0500FD19FC /* StringOptional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E029716E0400FD19FC /* StringOptional+Extension.swift */; };
 		8E4E66E32971703F00FD19FC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E22971703F00FD19FC /* Date+Extension.swift */; };
+		8E4E66E62971746400FD19FC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E52971746400FD19FC /* CoreDataStack.swift */; };
+		8E4E66E92971758300FD19FC /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */; };
+		8E4E66EA2971758300FD19FC /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		8E4E66DE2971599900FD19FC /* AddNoteScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNoteScreen.storyboard; sourceTree = "<group>"; };
 		8E4E66E029716E0400FD19FC /* StringOptional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringOptional+Extension.swift"; sourceTree = "<group>"; };
 		8E4E66E22971703F00FD19FC /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		8E4E66E52971746400FD19FC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 		8E4E669029701BDE00FD19FC /* Noontime List */ = {
 			isa = PBXGroup;
 			children = (
+				8E4E66E42971744300FD19FC /* Store */,
 				8E4E66B0297027E600FD19FC /* Helper */,
 				8E4E66AA29701E2500FD19FC /* Screens */,
 				8E4E66A829701D5100FD19FC /* App */,
@@ -271,6 +278,16 @@
 			path = AddNote;
 			sourceTree = "<group>";
 		};
+		8E4E66E42971744300FD19FC /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				8E4E66E52971746400FD19FC /* CoreDataStack.swift */,
+				8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */,
+				8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,14 +374,17 @@
 				8E4E66C12970370000FD19FC /* NotesViewController.swift in Sources */,
 				8E4E66E32971703F00FD19FC /* Date+Extension.swift in Sources */,
 				8E4E66D429703D8800FD19FC /* HomeNotesViewController.swift in Sources */,
+				8E4E66E62971746400FD19FC /* CoreDataStack.swift in Sources */,
 				8E4E66E129716E0500FD19FC /* StringOptional+Extension.swift in Sources */,
 				8E4E66B929702FFF00FD19FC /* PlannerViewController.swift in Sources */,
 				8E4E66B32970280400FD19FC /* UINavigation+ViewControllerExtension.swift in Sources */,
 				8E4E66D029703D5900FD19FC /* HomeHabitsViewController.swift in Sources */,
 				8E4E66DD2971598800FD19FC /* AddNoteViewController.swift in Sources */,
+				8E4E66E92971758300FD19FC /* Note+CoreDataClass.swift in Sources */,
 				8E4E669C29701BDE00FD19FC /* Noontime_List.xcdatamodeld in Sources */,
 				8E4E66CC29703D2800FD19FC /* HomePlannerViewController.swift in Sources */,
 				8E4E66C829703B9F00FD19FC /* TabbarViewController.swift in Sources */,
+				8E4E66EA2971758300FD19FC /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

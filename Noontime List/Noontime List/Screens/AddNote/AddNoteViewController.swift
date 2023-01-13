@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddNoteViewController: UIViewController {
 
@@ -13,6 +14,8 @@ class AddNoteViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var noteTitleTextField: UITextField!
     @IBOutlet weak var noteBodyTextView: UITextView!
+
+    var notes = [Note]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,7 @@ class AddNoteViewController: UIViewController {
     }
 
     @IBAction private func tappedDoneButton(_ sender: UIButton) {
+        saveNote()
         navigationController?.popViewController(animated: true)
     }
 
@@ -37,7 +41,17 @@ class AddNoteViewController: UIViewController {
 
     private func setUpLabel() {
         let date = Date()
-        dateLabel.text = date.getFormattedDate(format: "EEEE, MMM d, yyyy")
+        dateLabel.text = date.getStringFromDate(format: "EEEE, MMM d, yyyy")
+    }
+
+    private func saveNote() {
+        let managedContext = AppDelegate.sharedAppDelegate.coreDataStack.managedContext
+        let newNote = Note(context: managedContext)
+        newNote.setValue(dateLabel.text, forKey: #keyPath(Note.date))
+        newNote.setValue(noteTitleTextField.text, forKey: #keyPath(Note.title))
+        newNote.setValue(noteBodyTextView.text, forKey: #keyPath(Note.body))
+        self.notes.insert(newNote, at: 0)
+        AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
     }
 }
 
