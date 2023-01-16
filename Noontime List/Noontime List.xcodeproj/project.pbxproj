@@ -33,9 +33,11 @@
 		8E4E66DF2971599900FD19FC /* AddNoteScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66DE2971599900FD19FC /* AddNoteScreen.storyboard */; };
 		8E4E66E129716E0500FD19FC /* StringOptional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E029716E0400FD19FC /* StringOptional+Extension.swift */; };
 		8E4E66E32971703F00FD19FC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E22971703F00FD19FC /* Date+Extension.swift */; };
-		8E4E66E62971746400FD19FC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E52971746400FD19FC /* CoreDataStack.swift */; };
+		8E4E66E62971746400FD19FC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E52971746400FD19FC /* CoreDataManager.swift */; };
 		8E4E66E92971758300FD19FC /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */; };
 		8E4E66EA2971758300FD19FC /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */; };
+		8EBFE40129754476004B677B /* HomeNotesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFE3FF29754476004B677B /* HomeNotesCollectionViewCell.swift */; };
+		8EBFE40229754476004B677B /* HomeNotesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBFE40029754476004B677B /* HomeNotesCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,9 +69,11 @@
 		8E4E66DE2971599900FD19FC /* AddNoteScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNoteScreen.storyboard; sourceTree = "<group>"; };
 		8E4E66E029716E0400FD19FC /* StringOptional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringOptional+Extension.swift"; sourceTree = "<group>"; };
 		8E4E66E22971703F00FD19FC /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		8E4E66E52971746400FD19FC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8E4E66E52971746400FD19FC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8EBFE3FF29754476004B677B /* HomeNotesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotesCollectionViewCell.swift; sourceTree = "<group>"; };
+		8EBFE40029754476004B677B /* HomeNotesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeNotesCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,7 @@
 		8E4E66B729702FB800FD19FC /* HomeNotes */ = {
 			isa = PBXGroup;
 			children = (
+				8EBFE3FE2975444B004B677B /* Cell */,
 				8E4E66D329703D8800FD19FC /* HomeNotesViewController.swift */,
 				8E4E66D529703D9C00FD19FC /* HomeNotesScreen.storyboard */,
 			);
@@ -281,11 +286,20 @@
 		8E4E66E42971744300FD19FC /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				8E4E66E52971746400FD19FC /* CoreDataStack.swift */,
+				8E4E66E52971746400FD19FC /* CoreDataManager.swift */,
 				8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */,
 				8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		8EBFE3FE2975444B004B677B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8EBFE3FF29754476004B677B /* HomeNotesCollectionViewCell.swift */,
+				8EBFE40029754476004B677B /* HomeNotesCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E4E66C32970370F00FD19FC /* NotesScreen.storyboard in Resources */,
+				8EBFE40229754476004B677B /* HomeNotesCollectionViewCell.xib in Resources */,
 				8E4E66D229703D6B00FD19FC /* HomeHabitsScreen.storyboard in Resources */,
 				8E4E66D82970411C00FD19FC /* TabbarScreen.storyboard in Resources */,
 				8E4E66DF2971599900FD19FC /* AddNoteScreen.storyboard in Resources */,
@@ -374,7 +389,8 @@
 				8E4E66C12970370000FD19FC /* NotesViewController.swift in Sources */,
 				8E4E66E32971703F00FD19FC /* Date+Extension.swift in Sources */,
 				8E4E66D429703D8800FD19FC /* HomeNotesViewController.swift in Sources */,
-				8E4E66E62971746400FD19FC /* CoreDataStack.swift in Sources */,
+				8EBFE40129754476004B677B /* HomeNotesCollectionViewCell.swift in Sources */,
+				8E4E66E62971746400FD19FC /* CoreDataManager.swift in Sources */,
 				8E4E66E129716E0500FD19FC /* StringOptional+Extension.swift in Sources */,
 				8E4E66B929702FFF00FD19FC /* PlannerViewController.swift in Sources */,
 				8E4E66B32970280400FD19FC /* UINavigation+ViewControllerExtension.swift in Sources */,

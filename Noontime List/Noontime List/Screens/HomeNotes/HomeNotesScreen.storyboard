@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcE-0A-bhG">
-                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <rect key="frame" x="344" y="747" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="GSd-LY-l1d"/>
                                     <constraint firstAttribute="width" secondItem="AcE-0A-bhG" secondAttribute="height" multiplier="1:1" id="yJM-Ca-aqL"/>
@@ -28,16 +28,44 @@
                                     <action selector="tappedAddButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h7B-FP-uhP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal notes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z63-ey-gR1">
+                                <rect key="frame" x="30" y="64" width="364" height="33.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zh2-NW-17z">
+                                <rect key="frame" x="20" y="107.5" width="374" height="629.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Nv-tg-2sh">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AcE-0A-bhG" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="E5h-Hp-ead"/>
-                            <constraint firstItem="AcE-0A-bhG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bG9-Ok-yQB"/>
+                            <constraint firstItem="AcE-0A-bhG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="344" id="1cX-jU-JcW"/>
+                            <constraint firstItem="zh2-NW-17z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="AVp-s9-NaM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AcE-0A-bhG" secondAttribute="trailing" constant="20" id="Gvn-Uq-VSF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="AcE-0A-bhG" secondAttribute="bottom" constant="16" id="J9i-VL-I1s"/>
+                            <constraint firstItem="Z63-ey-gR1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="LYD-gn-2pC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Z63-ey-gR1" secondAttribute="trailing" constant="20" id="SVs-GI-9qR"/>
+                            <constraint firstItem="Z63-ey-gR1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Yqu-29-Oxe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zh2-NW-17z" secondAttribute="trailing" constant="20" id="qbn-y4-4GH"/>
+                            <constraint firstItem="AcE-0A-bhG" firstAttribute="top" secondItem="zh2-NW-17z" secondAttribute="bottom" constant="10" id="sdd-nh-Wn4"/>
+                            <constraint firstItem="zh2-NW-17z" firstAttribute="top" secondItem="Z63-ey-gR1" secondAttribute="bottom" constant="10" id="xBL-8s-Kcd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notes" image="note" catalog="system" id="Nnu-6P-oJY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="zh2-NW-17z" id="htr-34-E8W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

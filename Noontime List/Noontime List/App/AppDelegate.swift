@@ -10,17 +10,7 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
-    lazy var coreDataStack: CoreDataStack = .init(modelName: "Noontime_List")
-
-    static let sharedAppDelegate: AppDelegate = {
-        guard let delegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("Unexpected app delegate type, did it change? \(String(describing: UIApplication.shared.delegate))")
-        }
-        return delegate
-    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setUpNavigationBar()
@@ -29,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        AppDelegate.sharedAppDelegate.coreDataStack.saveContext()
+        CoreDataManager.shared.saveContext()
     }
 
     private func showScreen(with storyboardName: String, viewControllerName: String) {

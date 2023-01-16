@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="x55-mR-cpS">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="x55-mR-cpS">
                                 <rect key="frame" x="16" y="44" width="382" height="34"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nk9-Ra-n0u">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nk9-Ra-n0u">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -34,8 +34,17 @@
                                             <action selector="tappedBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nBc-40-eud"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT3-dX-TZi">
+                                        <rect key="frame" x="69" y="0.0" width="262" height="34"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                                        <connections>
+                                            <action selector="tappedDeleteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rrz-do-Tw5"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lg-qC-9cz">
-                                        <rect key="frame" x="195" y="0.0" width="187" height="34"/>
+                                        <rect key="frame" x="339" y="0.0" width="43" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Done">
@@ -94,6 +103,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dateLabel" destination="48y-HB-AEp" id="03u-dy-PEa"/>
+                        <outlet property="deleteButton" destination="tT3-dX-TZi" id="yIq-2z-HQu"/>
                         <outlet property="doneButton" destination="8lg-qC-9cz" id="Lvu-Kh-ER4"/>
                         <outlet property="noteBodyTextView" destination="Ruc-bP-B7x" id="xvD-qS-GuM"/>
                         <outlet property="noteTitleTextField" destination="Ihn-32-XYM" id="ETx-xn-DDw"/>
@@ -106,6 +116,7 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

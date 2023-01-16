@@ -8,7 +8,10 @@
 import UIKit
 import CoreData
 
-class CoreDataStack {
+class CoreDataManager {
+
+    static var shared = CoreDataManager(modelName: "Noontime_List")
+    
     private let modelName: String
 
     init(modelName: String) {
@@ -25,7 +28,7 @@ class CoreDataStack {
         return container
     }()
 
-    lazy var managedContext: NSManagedObjectContext = self.storeContainer.viewContext
+    lazy var managedContext: NSManagedObjectContext = storeContainer.viewContext
 
     func saveContext() {
         guard managedContext.hasChanges else { return }
