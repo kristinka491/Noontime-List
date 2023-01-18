@@ -32,7 +32,7 @@ class AddNoteViewController: SetUpKeyboardViewController {
 
     private var isChanged: Bool {
         if let note = note {
-            return noteTitleTextField.text != note.title || noteBodyTextView.text != note.body
+            return noteTitleTextField.text != note.title || noteBodyTextView.attributedText != note.body
         }
         return true
     }
@@ -125,7 +125,7 @@ class AddNoteViewController: SetUpKeyboardViewController {
                let noteBody = note?.body {
                 dateLabel.text = noteDate
                 noteTitleTextField.text = noteTitle
-                noteBodyTextView.text = noteBody
+                noteBodyTextView.attributedText = noteBody
             }
         }
     }
@@ -138,14 +138,14 @@ class AddNoteViewController: SetUpKeyboardViewController {
         let newNote = Note(context: coreDataManager.managedContext)
         newNote.setValue(dateLabel.text, forKey: #keyPath(Note.date))
         newNote.setValue(noteTitleTextField.text, forKey: #keyPath(Note.title))
-        newNote.setValue(noteBodyTextView.text, forKey: #keyPath(Note.body))
+        newNote.setValue(noteBodyTextView.attributedText, forKey: #keyPath(Note.body))
         coreDataManager.saveContext()
     }
 
     private func updateNote() {
         note?.setValue(dateLabel.text, forKey: #keyPath(Note.date))
         note?.setValue(noteTitleTextField.text, forKey: #keyPath(Note.title))
-        note?.setValue(noteBodyTextView.text, forKey: #keyPath(Note.body))
+        note?.setValue(noteBodyTextView.attributedText, forKey: #keyPath(Note.body))
         coreDataManager.saveContext()
     }
 

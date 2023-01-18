@@ -21,7 +21,7 @@ class HomeNotesCollectionViewCell: UICollectionViewCell {
 
     func setUpCell(_ model: Note) {
         titleLabel.text = model.title
-        bodyLabel.text = model.body
+        bodyLabel.attributedText = model.body
         dateLabel.text = model.date
     }
 
