@@ -8,13 +8,18 @@
 import UIKit
 import CoreData
 
-class AddNoteViewController: UIViewController {
+class AddNoteViewController: SetUpKeyboardViewController {
 
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var noteTitleTextField: UITextField!
     @IBOutlet weak var noteBodyTextView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var viewForChanges: UIView!
+    @IBOutlet weak var boldButton: UIButton!
+    @IBOutlet weak var italicButton: UIButton!
+    @IBOutlet weak var underlineBotton: UIButton!
+    @IBOutlet weak var listButton: UIButton!
 
     enum TypeOfController: String {
         case add
@@ -38,6 +43,7 @@ class AddNoteViewController: UIViewController {
         setUpLabel()
         setUpDeleteButton()
         setUpTextField()
+        setUpView()
     }
 
     @IBAction private func tappedBackButton(_ sender: UIButton) {
@@ -57,6 +63,26 @@ class AddNoteViewController: UIViewController {
     @IBAction private func tappedDeleteButton(_ sender: UIButton) {
         deleteNote()
         navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction private func tappedBoldButton(_ sender: UIButton) {
+        boldButton.isSelected = !boldButton.isSelected
+        italicButton.isSelected = false
+        changeText(currentFont)
+    }
+
+    @IBAction private func tappedItalicButton(_ sender: UIButton) {
+        italicButton.isSelected = !italicButton.isSelected
+        boldButton.isSelected = false
+        changeText(currentFont)
+    }
+
+    @IBAction private func tappedUnderlineButton(_ sender: UIButton) {
+
+    }
+
+    @IBAction private func tappedListButton(_ sender: UIButton) {
+
     }
 
     func setUp(with note: Note, typeOfController: TypeOfController) {
@@ -104,6 +130,9 @@ class AddNoteViewController: UIViewController {
         }
     }
 
+    private func setUpView() {
+        viewForChanges.layer.cornerRadius = 10
+    }
 
     private func saveNote() {
         let newNote = Note(context: coreDataManager.managedContext)
@@ -126,6 +155,17 @@ class AddNoteViewController: UIViewController {
             coreDataManager.saveContext()
         }
     }
+
+    private func changeText(_ font: UIFont?) {
+        if let font = font {
+            let selectedText = noteBodyTextView.selectedRange
+            let attributedString = NSMutableAttributedString(attributedString: noteBodyTextView.attributedText)
+            let attributes = [NSAttributedString.Key.font: font]
+            attributedString.addAttributes(attributes, range: noteBodyTextView.selectedRange)
+            noteBodyTextView.attributedText = attributedString
+            noteBodyTextView.selectedRange = selectedText
+        }
+    }
 }
 
 // MARK: -
@@ -145,5 +185,35 @@ extension AddNoteViewController: UITextViewDelegate {
 
     func textViewDidEndEditing(_ textView: UITextView) {
         setUpButtonActivity()
+    }
+
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if range.length == 0 && range.location == 0 && text.isEmpty {
+            return true
+        }
+
+        let originalAtributedString = NSMutableAttributedString(attributedString: noteBodyTextView.attributedText)
+        if range.length > 0 {
+            originalAtributedString.deleteCharacters(in: range)
+        } else if let font = currentFont {
+            let attributedString = NSMutableAttributedString(string: text)
+            attributedString.addAttribute(NSAttributedString.Key.font, value: font, range: NSRange(location: 0, length: text.count))
+            originalAtributedString.insert(attributedString, at: range.location)
+        }
+        textView.attributedText = originalAtributedString
+        textView.selectedRange = NSRange(location: text.isEmpty ? range.location : range.location + 1, length: 0)
+
+        return false
+    }
+
+    private var currentFont: UIFont? {
+        let font = UIFont(name: "Times New Roman", size: 23)
+        if boldButton.isSelected {
+            return font?.bold()
+        } else if italicButton.isSelected {
+            return font?.italics()
+        } else {
+            return font
+        }
     }
 }

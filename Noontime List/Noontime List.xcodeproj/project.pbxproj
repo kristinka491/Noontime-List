@@ -38,6 +38,8 @@
 		8E4E66EA2971758300FD19FC /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */; };
 		8EBFE40129754476004B677B /* HomeNotesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFE3FF29754476004B677B /* HomeNotesCollectionViewCell.swift */; };
 		8EBFE40229754476004B677B /* HomeNotesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBFE40029754476004B677B /* HomeNotesCollectionViewCell.xib */; };
+		8ED7EA452976AB45000C992A /* SetUpKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7EA442976AB45000C992A /* SetUpKeyboardViewController.swift */; };
+		8ED7EA482976D1E7000C992A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7EA472976D1E7000C992A /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8EBFE3FF29754476004B677B /* HomeNotesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotesCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EBFE40029754476004B677B /* HomeNotesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeNotesCollectionViewCell.xib; sourceTree = "<group>"; };
+		8ED7EA442976AB45000C992A /* SetUpKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpKeyboardViewController.swift; sourceTree = "<group>"; };
+		8ED7EA472976D1E7000C992A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		8E4E669029701BDE00FD19FC /* Noontime List */ = {
 			isa = PBXGroup;
 			children = (
+				8ED7EA462976AB7F000C992A /* Base */,
 				8E4E66E42971744300FD19FC /* Store */,
 				8E4E66B0297027E600FD19FC /* Helper */,
 				8E4E66AA29701E2500FD19FC /* Screens */,
@@ -211,6 +216,7 @@
 				8E4E66B22970280400FD19FC /* UINavigation+ViewControllerExtension.swift */,
 				8E4E66E029716E0400FD19FC /* StringOptional+Extension.swift */,
 				8E4E66E22971703F00FD19FC /* Date+Extension.swift */,
+				8ED7EA472976D1E7000C992A /* UIFont+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -302,6 +308,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		8ED7EA462976AB7F000C992A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8ED7EA442976AB45000C992A /* SetUpKeyboardViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,6 +396,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED7EA482976D1E7000C992A /* UIFont+Extension.swift in Sources */,
+				8ED7EA452976AB45000C992A /* SetUpKeyboardViewController.swift in Sources */,
 				8E4E66C629703A7000FD19FC /* UserDefaultsKeys.swift in Sources */,
 				8E4E669629701BDE00FD19FC /* HelloViewController.swift in Sources */,
 				8E4E66BD2970343100FD19FC /* HabitsViewController.swift in Sources */,
