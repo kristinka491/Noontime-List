@@ -67,18 +67,17 @@ class AddNoteViewController: SetUpKeyboardViewController {
 
     @IBAction private func tappedBoldButton(_ sender: UIButton) {
         boldButton.isSelected = !boldButton.isSelected
-        italicButton.isSelected = false
-        changeText(currentFont)
+        changeText()
     }
 
     @IBAction private func tappedItalicButton(_ sender: UIButton) {
         italicButton.isSelected = !italicButton.isSelected
-        boldButton.isSelected = false
-        changeText(currentFont)
+        changeText()
     }
 
     @IBAction private func tappedUnderlineButton(_ sender: UIButton) {
-
+        underlineBotton.isSelected = !underlineBotton.isSelected
+        changeText()
     }
 
     @IBAction private func tappedListButton(_ sender: UIButton) {
@@ -156,12 +155,14 @@ class AddNoteViewController: SetUpKeyboardViewController {
         }
     }
 
-    private func changeText(_ font: UIFont?) {
-        if let font = font {
+    private func changeText() {
+        if let attributes = currentAttibute {
             let selectedText = noteBodyTextView.selectedRange
             let attributedString = NSMutableAttributedString(attributedString: noteBodyTextView.attributedText)
-            let attributes = [NSAttributedString.Key.font: font]
             attributedString.addAttributes(attributes, range: noteBodyTextView.selectedRange)
+            if !underlineBotton.isSelected {
+                attributedString.removeAttribute(.underlineStyle, range: noteBodyTextView.selectedRange)
+            }
             noteBodyTextView.attributedText = attributedString
             noteBodyTextView.selectedRange = selectedText
         }
@@ -195,9 +196,9 @@ extension AddNoteViewController: UITextViewDelegate {
         let originalAtributedString = NSMutableAttributedString(attributedString: noteBodyTextView.attributedText)
         if range.length > 0 {
             originalAtributedString.deleteCharacters(in: range)
-        } else if let font = currentFont {
+        } else if let attributes = currentAttibute {
             let attributedString = NSMutableAttributedString(string: text)
-            attributedString.addAttribute(NSAttributedString.Key.font, value: font, range: NSRange(location: 0, length: text.count))
+            attributedString.addAttributes(attributes, range: NSRange(location: 0, length: text.count))
             originalAtributedString.insert(attributedString, at: range.location)
         }
         textView.attributedText = originalAtributedString
@@ -206,9 +207,20 @@ extension AddNoteViewController: UITextViewDelegate {
         return false
     }
 
+    private var currentAttibute: [NSAttributedString.Key: Any]? {
+        if underlineBotton.isSelected {
+            return [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue,
+                    NSAttributedString.Key.font: currentFont ?? UIFont()]
+        } else {
+            return [NSAttributedString.Key.font: currentFont ?? UIFont()]
+        }
+    }
+
     private var currentFont: UIFont? {
         let font = UIFont(name: "Times New Roman", size: 23)
-        if boldButton.isSelected {
+        if boldButton.isSelected && italicButton.isSelected {
+            return font?.boldItalics()
+        } else if boldButton.isSelected {
             return font?.bold()
         } else if italicButton.isSelected {
             return font?.italics()
