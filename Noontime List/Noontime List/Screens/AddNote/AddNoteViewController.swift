@@ -29,6 +29,7 @@ class AddNoteViewController: SetUpKeyboardViewController {
     private let coreDataManager = CoreDataManager.shared
     private var note: Note?
     private var typeOfController: TypeOfController = .add
+    private var isTextSelected = false
 
     private var isChanged: Bool {
         if let note = note {
@@ -157,14 +158,14 @@ class AddNoteViewController: SetUpKeyboardViewController {
 
     private func changeText() {
         if let attributes = currentAttibute {
-            let selectedText = noteBodyTextView.selectedRange
-            let attributedString = NSMutableAttributedString(attributedString: noteBodyTextView.attributedText)
-            attributedString.addAttributes(attributes, range: noteBodyTextView.selectedRange)
+            noteBodyTextView.textStorage.addAttributes(attributes, range: noteBodyTextView.selectedRange)
             if !underlineBotton.isSelected {
-                attributedString.removeAttribute(.underlineStyle, range: noteBodyTextView.selectedRange)
+                noteBodyTextView.textStorage.removeAttribute(.underlineStyle, range: noteBodyTextView.selectedRange)
             }
-            noteBodyTextView.attributedText = attributedString
-            noteBodyTextView.selectedRange = selectedText
+        }
+
+        if noteBodyTextView.selectedRange.length != 0 {
+            isTextSelected = true
         }
     }
 }
@@ -205,6 +206,13 @@ extension AddNoteViewController: UITextViewDelegate {
         textView.selectedRange = NSRange(location: text.isEmpty ? range.location : range.location + 1, length: 0)
 
         return false
+    }
+
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        if isTextSelected {
+            isTextSelected = false
+            [boldButton, italicButton, underlineBotton].forEach { $0?.isSelected = false }
+        }
     }
 
     private var currentAttibute: [NSAttributedString.Key: Any]? {
