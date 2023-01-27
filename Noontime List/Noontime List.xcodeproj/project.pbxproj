@@ -36,13 +36,16 @@
 		8E4E66E62971746400FD19FC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E52971746400FD19FC /* CoreDataManager.swift */; };
 		8E4E66E92971758300FD19FC /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */; };
 		8E4E66EA2971758300FD19FC /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */; };
+		8E621E032983F1B800F339E1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E621E022983F1B800F339E1 /* Day.swift */; };
 		8EBFE40129754476004B677B /* HomeNotesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFE3FF29754476004B677B /* HomeNotesCollectionViewCell.swift */; };
 		8EBFE40229754476004B677B /* HomeNotesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBFE40029754476004B677B /* HomeNotesCollectionViewCell.xib */; };
 		8ED7EA452976AB45000C992A /* SetUpKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7EA442976AB45000C992A /* SetUpKeyboardViewController.swift */; };
 		8ED7EA482976D1E7000C992A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7EA472976D1E7000C992A /* UIFont+Extension.swift */; };
+		A3D6ACBB44A6F5DD3E74E483 /* Pods_Noontime_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D6B3EE9153CFEF6E158F64 /* Pods_Noontime_List.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DC623B38F9EBB661E08CA28 /* Pods-Noontime List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noontime List.release.xcconfig"; path = "Target Support Files/Pods-Noontime List/Pods-Noontime List.release.xcconfig"; sourceTree = "<group>"; };
 		8E4E668E29701BDE00FD19FC /* Noontime List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Noontime List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4E669129701BDE00FD19FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E4E669529701BDE00FD19FC /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
@@ -74,10 +77,13 @@
 		8E4E66E52971746400FD19FC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8E621E022983F1B800F339E1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		8EBFE3FF29754476004B677B /* HomeNotesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotesCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EBFE40029754476004B677B /* HomeNotesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeNotesCollectionViewCell.xib; sourceTree = "<group>"; };
 		8ED7EA442976AB45000C992A /* SetUpKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpKeyboardViewController.swift; sourceTree = "<group>"; };
 		8ED7EA472976D1E7000C992A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		D3D6B3EE9153CFEF6E158F64 /* Pods_Noontime_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Noontime_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3199884CEF36C6497873A83 /* Pods-Noontime List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noontime List.debug.xcconfig"; path = "Target Support Files/Pods-Noontime List/Pods-Noontime List.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,17 +91,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D6ACBB44A6F5DD3E74E483 /* Pods_Noontime_List.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00FACE18A5B35138C2F6D8FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3199884CEF36C6497873A83 /* Pods-Noontime List.debug.xcconfig */,
+				0DC623B38F9EBB661E08CA28 /* Pods-Noontime List.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8E4E668529701BDE00FD19FC = {
 			isa = PBXGroup;
 			children = (
 				8E4E669029701BDE00FD19FC /* Noontime List */,
 				8E4E668F29701BDE00FD19FC /* Products */,
+				00FACE18A5B35138C2F6D8FB /* Pods */,
+				E90F108E8B2FC19535884F92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +129,7 @@
 		8E4E669029701BDE00FD19FC /* Noontime List */ = {
 			isa = PBXGroup;
 			children = (
+				8E621E012983F1A900F339E1 /* Model */,
 				8ED7EA462976AB7F000C992A /* Base */,
 				8E4E66E42971744300FD19FC /* Store */,
 				8E4E66B0297027E600FD19FC /* Helper */,
@@ -299,6 +319,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		8E621E012983F1A900F339E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E621E022983F1B800F339E1 /* Day.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8EBFE3FE2975444B004B677B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +344,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		E90F108E8B2FC19535884F92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3D6B3EE9153CFEF6E158F64 /* Pods_Noontime_List.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,9 +359,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E4E66A529701BE100FD19FC /* Build configuration list for PBXNativeTarget "Noontime List" */;
 			buildPhases = (
+				6CC8D5F1BF9C10F259ADA678 /* [CP] Check Pods Manifest.lock */,
 				8E4E668A29701BDE00FD19FC /* Sources */,
 				8E4E668B29701BDE00FD19FC /* Frameworks */,
 				8E4E668C29701BDE00FD19FC /* Resources */,
+				8289D8C0732AB9D39C8F2EE5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -391,6 +429,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CC8D5F1BF9C10F259ADA678 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Noontime List-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8289D8C0732AB9D39C8F2EE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Noontime List/Pods-Noontime List-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Noontime List/Pods-Noontime List-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Noontime List/Pods-Noontime List-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E4E668A29701BDE00FD19FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -400,6 +480,7 @@
 				8ED7EA452976AB45000C992A /* SetUpKeyboardViewController.swift in Sources */,
 				8E4E66C629703A7000FD19FC /* UserDefaultsKeys.swift in Sources */,
 				8E4E669629701BDE00FD19FC /* HelloViewController.swift in Sources */,
+				8E621E032983F1B800F339E1 /* Day.swift in Sources */,
 				8E4E66BD2970343100FD19FC /* HabitsViewController.swift in Sources */,
 				8E4E669229701BDE00FD19FC /* AppDelegate.swift in Sources */,
 				8E4E66C12970370000FD19FC /* NotesViewController.swift in Sources */,
@@ -560,6 +641,7 @@
 		};
 		8E4E66A629701BE100FD19FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3199884CEF36C6497873A83 /* Pods-Noontime List.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -587,6 +669,7 @@
 		};
 		8E4E66A729701BE100FD19FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC623B38F9EBB661E08CA28 /* Pods-Noontime List.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
