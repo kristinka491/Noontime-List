@@ -124,9 +124,9 @@
                                                 <rect key="frame" x="226.5" y="0.0" width="67.5" height="40"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="list.bullet" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="highlighter" catalog="system"/>
                                                 <connections>
-                                                    <action selector="tappedListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Aez-8x-7Mj"/>
+                                                    <action selector="tappedHighlightButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0rU-aC-Eg1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -141,6 +141,61 @@
                                     <constraint firstAttribute="trailing" secondItem="S8e-S8-OVk" secondAttribute="trailing" id="k5W-BA-fIj"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KO-SB-gnd">
+                                <rect key="frame" x="204" y="723" width="150" height="20"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="5TD-Mc-1E6">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alm-G2-oVh">
+                                                <rect key="frame" x="0.0" y="0.0" width="20.5" height="20"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="tappedYellowButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wv3-bZ-jBo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBO-Sx-xyi">
+                                                <rect key="frame" x="43.5" y="0.0" width="20" height="20"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="tappedGreenButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ijw-EE-Fqu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9j-ED-5Qo">
+                                                <rect key="frame" x="86.5" y="0.0" width="20.5" height="20"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="tappedRedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xC8-Lp-vVm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWj-pJ-vhn">
+                                                <rect key="frame" x="130" y="0.0" width="20" height="20"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="tappedIndigoButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dxS-Zw-rb0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="5TD-Mc-1E6" firstAttribute="leading" secondItem="3KO-SB-gnd" secondAttribute="leading" id="7XC-KO-tdL"/>
+                                    <constraint firstAttribute="width" constant="150" id="AJt-wk-JMS"/>
+                                    <constraint firstItem="5TD-Mc-1E6" firstAttribute="top" secondItem="3KO-SB-gnd" secondAttribute="top" id="CVt-OH-SP0"/>
+                                    <constraint firstAttribute="trailing" secondItem="5TD-Mc-1E6" secondAttribute="trailing" id="caY-4B-hM2"/>
+                                    <constraint firstAttribute="height" constant="20" id="rwA-Ev-iQv"/>
+                                    <constraint firstAttribute="bottom" secondItem="5TD-Mc-1E6" secondAttribute="bottom" id="tFJ-oa-Eji"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -152,6 +207,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ihn-32-XYM" secondAttribute="trailing" constant="20" id="Dpr-wf-Urp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="x55-mR-cpS" secondAttribute="trailing" constant="16" id="G5g-Ku-nzc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ruc-bP-B7x" secondAttribute="trailing" constant="20" id="HyD-t7-nc9"/>
+                            <constraint firstItem="Gl1-l8-nOF" firstAttribute="top" secondItem="3KO-SB-gnd" secondAttribute="bottom" constant="10" id="NnS-lp-31q"/>
                             <constraint firstItem="Ruc-bP-B7x" firstAttribute="top" secondItem="Ihn-32-XYM" secondAttribute="bottom" id="Snd-Ng-LGt"/>
                             <constraint firstItem="48y-HB-AEp" firstAttribute="top" secondItem="x55-mR-cpS" secondAttribute="bottom" constant="20" id="Ttd-oO-6KV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="48y-HB-AEp" secondAttribute="trailing" constant="20" id="YSx-Ma-IG5"/>
@@ -160,6 +216,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Gl1-l8-nOF" secondAttribute="bottom" constant="20" id="gwH-Eg-PIx"/>
                             <constraint firstItem="x55-mR-cpS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="gyv-w3-Kcr"/>
                             <constraint firstItem="Ruc-bP-B7x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hd4-tS-X5V"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3KO-SB-gnd" secondAttribute="trailing" constant="60" id="raz-9l-RDs"/>
                             <constraint firstItem="Ihn-32-XYM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="teH-Iv-HFD"/>
                         </constraints>
                     </view>
@@ -168,15 +225,20 @@
                     <connections>
                         <outlet property="boldButton" destination="HSO-DT-reA" id="53M-RP-3Ab"/>
                         <outlet property="bottomConstraint" destination="gwH-Eg-PIx" id="ErC-5M-2rQ"/>
+                        <outlet property="colorsView" destination="3KO-SB-gnd" id="6BM-x8-oqe"/>
                         <outlet property="dateLabel" destination="48y-HB-AEp" id="03u-dy-PEa"/>
                         <outlet property="deleteButton" destination="tT3-dX-TZi" id="yIq-2z-HQu"/>
                         <outlet property="doneButton" destination="8lg-qC-9cz" id="Lvu-Kh-ER4"/>
+                        <outlet property="greenColorButton" destination="eBO-Sx-xyi" id="UUG-wX-Xgl"/>
+                        <outlet property="highlightButton" destination="F8i-2G-DfW" id="ZuP-NW-QTa"/>
+                        <outlet property="indigoColorButton" destination="qWj-pJ-vhn" id="aFq-cc-Tk3"/>
                         <outlet property="italicButton" destination="GYp-ZX-rY2" id="OQl-Eq-mpk"/>
-                        <outlet property="listButton" destination="F8i-2G-DfW" id="pCX-Mu-NBT"/>
                         <outlet property="noteBodyTextView" destination="Ruc-bP-B7x" id="xvD-qS-GuM"/>
                         <outlet property="noteTitleTextField" destination="Ihn-32-XYM" id="ETx-xn-DDw"/>
+                        <outlet property="redColorButton" destination="I9j-ED-5Qo" id="Hob-Sw-dde"/>
                         <outlet property="underlineBotton" destination="hZP-7b-nCb" id="O2Y-Ln-cum"/>
                         <outlet property="viewForChanges" destination="Gl1-l8-nOF" id="Nl8-E4-KZ1"/>
+                        <outlet property="yellowColorButton" destination="Alm-G2-oVh" id="UPT-NL-vRf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,8 +249,8 @@
     <resources>
         <image name="bold" catalog="system" width="128" height="128"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="highlighter" catalog="system" width="128" height="119"/>
         <image name="italic" catalog="system" width="118" height="128"/>
-        <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <image name="underline" catalog="system" width="105" height="128"/>
         <systemColor name="labelColor">
@@ -199,6 +261,18 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -19,7 +19,12 @@ class AddNoteViewController: SetUpKeyboardViewController {
     @IBOutlet weak var boldButton: UIButton!
     @IBOutlet weak var italicButton: UIButton!
     @IBOutlet weak var underlineBotton: UIButton!
-    @IBOutlet weak var listButton: UIButton!
+    @IBOutlet weak var highlightButton: UIButton!
+    @IBOutlet weak var yellowColorButton: UIButton!
+    @IBOutlet weak var greenColorButton: UIButton!
+    @IBOutlet weak var redColorButton: UIButton!
+    @IBOutlet weak var indigoColorButton: UIButton!
+    @IBOutlet weak var colorsView: UIView!
 
     enum TypeOfController: String {
         case add
@@ -45,6 +50,7 @@ class AddNoteViewController: SetUpKeyboardViewController {
         setUpDeleteButton()
         setUpTextField()
         setUpView()
+        setUpButtons()
     }
 
     @IBAction private func tappedBackButton(_ sender: UIButton) {
@@ -81,8 +87,45 @@ class AddNoteViewController: SetUpKeyboardViewController {
         changeText()
     }
 
-    @IBAction private func tappedListButton(_ sender: UIButton) {
+    @IBAction private func tappedHighlightButton(_ sender: UIButton) {
+        highlightButton.isSelected = !highlightButton.isSelected
+        colorsView.isHidden = !colorsView.isHidden
+    }
 
+    @IBAction private func tappedYellowButton(_ sender: UIButton){
+        yellowColorButton.isSelected = !yellowColorButton.isSelected
+        redColorButton.isSelected = false
+        greenColorButton.isSelected = false
+        indigoColorButton.isSelected = false
+        changeText()
+        colorsView.isHidden = true
+    }
+
+    @IBAction private func tappedRedButton(_ sender: UIButton) {
+        redColorButton.isSelected = !redColorButton.isSelected
+        yellowColorButton.isSelected = false
+        greenColorButton.isSelected = false
+        indigoColorButton.isSelected = false
+        changeText()
+        colorsView.isHidden = true
+    }
+
+    @IBAction private func tappedGreenButton(_ sender: UIButton) {
+        greenColorButton.isSelected = !greenColorButton.isSelected
+        yellowColorButton.isSelected = false
+        redColorButton.isSelected = false
+        indigoColorButton.isSelected = false
+        changeText()
+        colorsView.isHidden = true
+    }
+
+    @IBAction private func tappedIndigoButton(_ sender: UIButton) {
+        indigoColorButton.isSelected = !indigoColorButton.isSelected
+        yellowColorButton.isSelected = false
+        redColorButton.isSelected = false
+        greenColorButton.isSelected = false
+        changeText()
+        colorsView.isHidden = true
     }
 
     func setUp(with note: Note, typeOfController: TypeOfController) {
@@ -132,6 +175,17 @@ class AddNoteViewController: SetUpKeyboardViewController {
 
     private func setUpView() {
         viewForChanges.layer.cornerRadius = 10
+    }
+
+    private func setUpButtons() {
+        yellowColorButton.layer.cornerRadius = yellowColorButton.frame.size.width / 2
+        redColorButton.layer.cornerRadius = redColorButton.frame.size.width / 2
+        greenColorButton.layer.cornerRadius = greenColorButton.frame.size.width / 2
+        indigoColorButton.layer.cornerRadius = indigoColorButton.frame.size.width / 2
+        yellowColorButton.clipsToBounds = true
+        redColorButton.clipsToBounds = true
+        greenColorButton.clipsToBounds = true
+        indigoColorButton.clipsToBounds = true
     }
 
     private func saveNote() {
@@ -211,13 +265,16 @@ extension AddNoteViewController: UITextViewDelegate {
     func textViewDidChangeSelection(_ textView: UITextView) {
         if isTextSelected {
             isTextSelected = false
-            [boldButton, italicButton, underlineBotton].forEach { $0?.isSelected = false }
+            [boldButton, italicButton, underlineBotton, highlightButton, yellowColorButton, redColorButton, greenColorButton, indigoColorButton].forEach { $0?.isSelected = false }
         }
     }
 
     private var currentAttibute: [NSAttributedString.Key: Any]? {
         if underlineBotton.isSelected {
             return [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue,
+                    NSAttributedString.Key.font: currentFont ?? UIFont()]
+        } else if highlightButton.isSelected {
+            return [NSAttributedString.Key.backgroundColor: currentBackgroundColor ?? UIColor(),
                     NSAttributedString.Key.font: currentFont ?? UIFont()]
         } else {
             return [NSAttributedString.Key.font: currentFont ?? UIFont()]
@@ -234,6 +291,20 @@ extension AddNoteViewController: UITextViewDelegate {
             return font?.italics()
         } else {
             return font
+        }
+    }
+
+    private var currentBackgroundColor: UIColor? {
+        if yellowColorButton.isSelected {
+            return UIColor.yellow
+        } else if redColorButton.isSelected {
+            return UIColor.red
+        } else if greenColorButton.isSelected {
+            return UIColor.green
+        } else if indigoColorButton.isSelected{
+            return UIColor.systemIndigo
+        } else {
+            return UIColor.clear
         }
     }
 }
