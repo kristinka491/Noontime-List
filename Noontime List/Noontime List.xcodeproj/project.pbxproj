@@ -36,6 +36,12 @@
 		8E4E66E62971746400FD19FC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E52971746400FD19FC /* CoreDataManager.swift */; };
 		8E4E66E92971758300FD19FC /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */; };
 		8E4E66EA2971758300FD19FC /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */; };
+		8E4FAD5129925BDF00F9820A /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FAD5029925BDF00F9820A /* AddTaskViewController.swift */; };
+		8E4FAD5329925BF500F9820A /* AddTaskScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4FAD5229925BF500F9820A /* AddTaskScreen.storyboard */; };
+		8E4FAD5E29927C9A00F9820A /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FAD5C29927C9A00F9820A /* Task+CoreDataProperties.swift */; };
+		8E4FAD5F29927C9A00F9820A /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FAD5D29927C9A00F9820A /* Task+CoreDataClass.swift */; };
+		8E4FAD632992840E00F9820A /* TasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4FAD612992840E00F9820A /* TasksTableViewCell.swift */; };
+		8E4FAD642992840E00F9820A /* TasksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4FAD622992840E00F9820A /* TasksTableViewCell.xib */; };
 		8E621E032983F1B800F339E1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E621E022983F1B800F339E1 /* Day.swift */; };
 		8EBFE40129754476004B677B /* HomeNotesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBFE3FF29754476004B677B /* HomeNotesCollectionViewCell.swift */; };
 		8EBFE40229754476004B677B /* HomeNotesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBFE40029754476004B677B /* HomeNotesCollectionViewCell.xib */; };
@@ -77,6 +83,12 @@
 		8E4E66E52971746400FD19FC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8E4FAD5029925BDF00F9820A /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		8E4FAD5229925BF500F9820A /* AddTaskScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTaskScreen.storyboard; sourceTree = "<group>"; };
+		8E4FAD5C29927C9A00F9820A /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "/Users/vladbirukov/Desktop/Noontime list/Noontime List/Noontime List/Store/Task+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		8E4FAD5D29927C9A00F9820A /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataClass.swift"; path = "/Users/vladbirukov/Desktop/Noontime list/Noontime List/Noontime List/Store/Task+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		8E4FAD612992840E00F9820A /* TasksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewCell.swift; sourceTree = "<group>"; };
+		8E4FAD622992840E00F9820A /* TasksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasksTableViewCell.xib; sourceTree = "<group>"; };
 		8E621E022983F1B800F339E1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		8EBFE3FF29754476004B677B /* HomeNotesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotesCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EBFE40029754476004B677B /* HomeNotesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeNotesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -252,6 +264,7 @@
 		8E4E66B529702F9E00FD19FC /* HomePlanner */ = {
 			isa = PBXGroup;
 			children = (
+				8E4FAD60299283DB00F9820A /* Cell */,
 				8E4E66CB29703D2800FD19FC /* HomePlannerViewController.swift */,
 				8E4E66CD29703D3800FD19FC /* HomePlannerScreen.storyboard */,
 			);
@@ -288,6 +301,8 @@
 		8E4E66D92971593500FD19FC /* AddTask */ = {
 			isa = PBXGroup;
 			children = (
+				8E4FAD5029925BDF00F9820A /* AddTaskViewController.swift */,
+				8E4FAD5229925BF500F9820A /* AddTaskScreen.storyboard */,
 			);
 			path = AddTask;
 			sourceTree = "<group>";
@@ -314,8 +329,19 @@
 				8E4E66E52971746400FD19FC /* CoreDataManager.swift */,
 				8E4E66E72971758300FD19FC /* Note+CoreDataClass.swift */,
 				8E4E66E82971758300FD19FC /* Note+CoreDataProperties.swift */,
+				8E4FAD5D29927C9A00F9820A /* Task+CoreDataClass.swift */,
+				8E4FAD5C29927C9A00F9820A /* Task+CoreDataProperties.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		8E4FAD60299283DB00F9820A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8E4FAD612992840E00F9820A /* TasksTableViewCell.swift */,
+				8E4FAD622992840E00F9820A /* TasksTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8E621E012983F1A900F339E1 /* Model */ = {
@@ -415,6 +441,7 @@
 				8EBFE40229754476004B677B /* HomeNotesCollectionViewCell.xib in Resources */,
 				8E4E66D229703D6B00FD19FC /* HomeHabitsScreen.storyboard in Resources */,
 				8E4E66D82970411C00FD19FC /* TabbarScreen.storyboard in Resources */,
+				8E4FAD642992840E00F9820A /* TasksTableViewCell.xib in Resources */,
 				8E4E66DF2971599900FD19FC /* AddNoteScreen.storyboard in Resources */,
 				8E4E66A129701BE100FD19FC /* LaunchScreen.storyboard in Resources */,
 				8E4E669E29701BE100FD19FC /* Assets.xcassets in Resources */,
@@ -423,6 +450,7 @@
 				8E4E669929701BDE00FD19FC /* HelloScreen.storyboard in Resources */,
 				8E4E66BB2970300C00FD19FC /* PlannerScreen.storyboard in Resources */,
 				8E4E66D629703D9C00FD19FC /* HomeNotesScreen.storyboard in Resources */,
+				8E4FAD5329925BF500F9820A /* AddTaskScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,11 +519,15 @@
 				8E4E66B929702FFF00FD19FC /* PlannerViewController.swift in Sources */,
 				8E4E66B32970280400FD19FC /* UINavigation+ViewControllerExtension.swift in Sources */,
 				8E4E66D029703D5900FD19FC /* HomeHabitsViewController.swift in Sources */,
+				8E4FAD5F29927C9A00F9820A /* Task+CoreDataClass.swift in Sources */,
 				8E4E66DD2971598800FD19FC /* AddNoteViewController.swift in Sources */,
+				8E4FAD5129925BDF00F9820A /* AddTaskViewController.swift in Sources */,
 				8E4E66E92971758300FD19FC /* Note+CoreDataClass.swift in Sources */,
+				8E4FAD632992840E00F9820A /* TasksTableViewCell.swift in Sources */,
 				8E4E669C29701BDE00FD19FC /* Noontime_List.xcdatamodeld in Sources */,
 				8E4E66CC29703D2800FD19FC /* HomePlannerViewController.swift in Sources */,
 				8E4E66C829703B9F00FD19FC /* TabbarViewController.swift in Sources */,
+				8E4FAD5E29927C9A00F9820A /* Task+CoreDataProperties.swift in Sources */,
 				8E4E66EA2971758300FD19FC /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
