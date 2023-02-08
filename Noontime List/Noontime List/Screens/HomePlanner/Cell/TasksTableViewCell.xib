@@ -10,24 +10,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="164" id="KGk-i7-Jjw" customClass="TasksTableViewCell" customModule="Noontime_List" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="279" id="KGk-i7-Jjw" customClass="TasksTableViewCell" customModule="Noontime_List" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="168"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+                <rect key="frame" x="0.0" y="0.0" width="327" height="168"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eo-2v-UwR">
-                        <rect key="frame" x="10" y="10" width="300" height="144"/>
+                        <rect key="frame" x="10" y="10" width="307" height="148"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-TD-Jgh">
-                                <rect key="frame" x="10" y="10" width="280" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ms-TD-Jgh">
+                                <rect key="frame" x="10" y="10" width="287" height="0.0"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnS-OM-c56">
-                                <rect key="frame" x="10" y="15" width="280" height="0.0"/>
+                                <rect key="frame" x="10" y="15" width="287" height="123"/>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,11 +36,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5Ms-TD-Jgh" firstAttribute="top" secondItem="8eo-2v-UwR" secondAttribute="top" constant="10" id="2XC-nb-MHA"/>
+                            <constraint firstAttribute="bottom" secondItem="bnS-OM-c56" secondAttribute="bottom" constant="10" id="30w-OE-1hQ"/>
                             <constraint firstItem="bnS-OM-c56" firstAttribute="leading" secondItem="8eo-2v-UwR" secondAttribute="leading" constant="10" id="BQW-wG-Tyu"/>
                             <constraint firstAttribute="trailing" secondItem="5Ms-TD-Jgh" secondAttribute="trailing" constant="10" id="IhN-yk-9u3"/>
                             <constraint firstItem="5Ms-TD-Jgh" firstAttribute="leading" secondItem="8eo-2v-UwR" secondAttribute="leading" constant="10" id="Njw-49-Vmg"/>
                             <constraint firstAttribute="trailing" secondItem="bnS-OM-c56" secondAttribute="trailing" constant="10" id="PV1-sy-Xjs"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bnS-OM-c56" secondAttribute="bottom" constant="10" id="Riz-1Z-eV2"/>
                             <constraint firstItem="bnS-OM-c56" firstAttribute="top" secondItem="5Ms-TD-Jgh" secondAttribute="bottom" constant="5" id="hmC-bh-GPi"/>
                         </constraints>
                     </view>
@@ -58,7 +58,7 @@
                 <outlet property="taskDescriptionLabel" destination="bnS-OM-c56" id="2pQ-Cy-4lt"/>
                 <outlet property="taskNameLabel" destination="5Ms-TD-Jgh" id="R75-oR-flV"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>
+            <point key="canvasLocation" x="142.75362318840581" y="161.04910714285714"/>
         </tableViewCell>
     </objects>
     <resources>

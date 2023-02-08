@@ -19,9 +19,7 @@ class HomePlannerViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     private let coreDataManager = CoreDataManager.shared
-
     private var selectedDate: Date?
-
     private var tasks = [Task]()
 
     private var isSelected = false {
@@ -32,16 +30,17 @@ class HomePlannerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getTasks()
         setUpLabel()
         setUpCalendar()
         setUpTableView()
+        setUpNotifications()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
         view.layoutIfNeeded()
+        calendar.reloadData()
     }
 
     @IBAction private func tappedCalendarButton(_ sender: UIButton) {
@@ -56,10 +55,9 @@ class HomePlannerViewController: UIViewController {
     }
 
     @IBAction private func tappedAddButton(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "AddTaskScreen", bundle: nil)
-        if let addTaskViewController = storyBoard.instantiateViewController(withIdentifier: "AddTaskScreen") as? AddTaskViewController {
-            addTaskViewController.setUp(with: selectedDate ?? Date())
-            navigationController?.pushViewController(addTaskViewController, animated: true)
+        if let controller = viewController(storyboardName: "AddTaskScreen", identifier: "AddTaskScreen") as? AddTaskViewController {
+            controller.setUp(with: selectedDate ?? Date(), typeOfController: .add)
+            navigationController?.pushViewController(controller, animated: true)
         }
     }
 
@@ -95,16 +93,20 @@ class HomePlannerViewController: UIViewController {
         tableView.register(UINib(nibName: "TasksTableViewCell", bundle: nil), forCellReuseIdentifier: "taskCell")
     }
 
-    private func getTasks() {
-        let taskFetch: NSFetchRequest<Task> = Task.fetchRequest()
-        let sortByDate = NSSortDescriptor(key: #keyPath(Task.date), ascending: false)
-        taskFetch.sortDescriptors = [sortByDate]
-        do {
-            let results = try coreDataManager.managedContext.fetch(taskFetch)
-            tasks = results
-        } catch let error as NSError {
-            print("Fetch error: \(error) description: \(error.userInfo)")
-        }
+    private func setUpNotifications() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self,
+                                       selector: #selector(managedObjectContextObjectsDidChange),
+                                       name: NSNotification.Name.NSManagedObjectContextObjectsDidChange,
+                                       object: coreDataManager.managedContext)
+    }
+
+    @objc private func managedObjectContextObjectsDidChange(notification: NSNotification) {
+        updateTasks()
+    }
+
+    private func updateTasks() {
+        tasks = Task.getTasksByDate(date: selectedDate ?? Date())
         tableView.reloadData()
     }
 }
@@ -115,21 +117,14 @@ class HomePlannerViewController: UIViewController {
 extension HomePlannerViewController: FSCalendarDataSource, FSCalendarDelegate {
 
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        let now = Date()
-        let calendar = Calendar.current
-
-        let currentDate = calendar.date(bySettingHour: calendar.component(.hour, from: now),
-                               minute: calendar.component(.minute, from: now),
-                               second: calendar.component(.second, from: now),
-                               of: date)
-
-        selectedDate = currentDate
+        selectedDate = date
         isSelected = true
+        
+        updateTasks()
     }
 
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-
-        return 1
+        return Task.isDateHasEvents(date: date) ? 1 : 0
     }
 }
 
@@ -142,13 +137,19 @@ extension HomePlannerViewController: UITableViewDelegate, UITableViewDataSource 
         return tasks.count
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as? TasksTableViewCell {
             cell.setUp(tasks[indexPath.row])
             return cell
         }
         return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let controller = viewController(storyboardName: "AddTaskScreen", identifier: "AddTaskScreen") as? AddTaskViewController {
+            controller.setUp(with: tasks[indexPath.row], typeOfController: .edit)
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
 }
 

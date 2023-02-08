@@ -57,9 +57,10 @@
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="mnz-bA-NTo"/>
                                 </connections>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x9z-Yv-Qe9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="x9z-Yv-Qe9">
                                 <rect key="frame" x="16" y="349" width="382" height="388"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0P-S8-UGr">
                                 <rect key="frame" x="344" y="747" width="50" height="50"/>
@@ -102,7 +103,7 @@
                         <outlet property="calendar" destination="D2o-7I-UlU" id="eIx-L5-i3o"/>
                         <outlet property="calendarButton" destination="ASO-GS-b87" id="fxz-LZ-AG5"/>
                         <outlet property="dateLabel" destination="poV-1m-zFS" id="kws-uL-HET"/>
-                        <outlet property="tableView" destination="x9z-Yv-Qe9" id="QO9-3T-X3c"/>
+                        <outlet property="tableView" destination="x9z-Yv-Qe9" id="apj-qi-qUX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
