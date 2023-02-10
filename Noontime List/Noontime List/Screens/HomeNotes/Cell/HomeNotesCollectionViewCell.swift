@@ -12,7 +12,7 @@ class HomeNotesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var viewForBackground: UIView!
+    @IBOutlet weak var borderView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +26,9 @@ class HomeNotesCollectionViewCell: UICollectionViewCell {
     }
 
     private func setUpView() {
-        viewForBackground.layer.cornerRadius = 10
+        borderView.layer.cornerRadius = 10
+        borderView.layer.borderColor = UIColor(red: 250/255, green: 26/255, blue: 142/255, alpha: 1.00).cgColor
+        borderView.layer.borderWidth = 1
     }
 
 }

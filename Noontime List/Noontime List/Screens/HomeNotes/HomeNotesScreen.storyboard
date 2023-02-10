@@ -49,7 +49,6 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AcE-0A-bhG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="344" id="1cX-jU-JcW"/>
                             <constraint firstItem="zh2-NW-17z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="AVp-s9-NaM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AcE-0A-bhG" secondAttribute="trailing" constant="20" id="Gvn-Uq-VSF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="AcE-0A-bhG" secondAttribute="bottom" constant="16" id="J9i-VL-I1s"/>

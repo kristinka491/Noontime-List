@@ -29,7 +29,7 @@ class TasksTableViewCell: UITableViewCell {
 
     private func setUpView() {
         borderView.layer.cornerRadius = 20
-        borderView.layer.borderColor = UIColor.black.cgColor
+        borderView.layer.borderColor = UIColor(red: 250/255, green: 26/255, blue: 142/255, alpha: 1.00).cgColor
         borderView.layer.borderWidth = 1
     }
     

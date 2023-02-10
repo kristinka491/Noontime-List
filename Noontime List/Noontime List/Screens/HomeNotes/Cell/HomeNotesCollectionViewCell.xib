@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.92647541072092898" green="0.90610669194435589" blue="0.92268790939227252" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ep2-9l-lZB" firstAttribute="leading" secondItem="SNt-5j-oQu" secondAttribute="leading" constant="10" id="9yB-aO-jD8"/>
                             <constraint firstItem="j5s-Bh-dw3" firstAttribute="top" secondItem="SNt-5j-oQu" secondAttribute="top" constant="10" id="GU1-LZ-4mv"/>
@@ -64,9 +64,9 @@
             <size key="customSize" width="180" height="207"/>
             <connections>
                 <outlet property="bodyLabel" destination="Ep2-9l-lZB" id="eNh-hN-6Sd"/>
+                <outlet property="borderView" destination="SNt-5j-oQu" id="gXj-PX-p0w"/>
                 <outlet property="dateLabel" destination="j5s-Bh-dw3" id="R94-AE-Nc1"/>
                 <outlet property="titleLabel" destination="dwx-c2-Imw" id="vKF-tV-xdt"/>
-                <outlet property="viewForBackground" destination="SNt-5j-oQu" id="yBD-SO-ImM"/>
             </connections>
             <point key="canvasLocation" x="231.8840579710145" y="116.18303571428571"/>
         </collectionViewCell>
