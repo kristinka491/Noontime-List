@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notes-->
+        <!--Home Notes View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="HomeNotesScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeNotesViewController" customModule="Noontime_List" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
                             <constraint firstItem="zh2-NW-17z" firstAttribute="top" secondItem="Z63-ey-gR1" secondAttribute="bottom" constant="10" id="xBL-8s-Kcd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Notes" image="note" catalog="system" id="Nnu-6P-oJY"/>
+                    <tabBarItem key="tabBarItem" title="" image="note" catalog="system" id="Nnu-6P-oJY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="zh2-NW-17z" id="htr-34-E8W"/>
