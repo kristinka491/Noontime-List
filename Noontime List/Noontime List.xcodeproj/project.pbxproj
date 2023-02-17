@@ -24,8 +24,6 @@
 		8E4E66C829703B9F00FD19FC /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66C729703B9F00FD19FC /* TabbarViewController.swift */; };
 		8E4E66CC29703D2800FD19FC /* HomePlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66CB29703D2800FD19FC /* HomePlannerViewController.swift */; };
 		8E4E66CE29703D3800FD19FC /* HomePlannerScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66CD29703D3800FD19FC /* HomePlannerScreen.storyboard */; };
-		8E4E66D029703D5900FD19FC /* HomeHabitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66CF29703D5900FD19FC /* HomeHabitsViewController.swift */; };
-		8E4E66D229703D6B00FD19FC /* HomeHabitsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66D129703D6B00FD19FC /* HomeHabitsScreen.storyboard */; };
 		8E4E66D429703D8800FD19FC /* HomeNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E66D329703D8800FD19FC /* HomeNotesViewController.swift */; };
 		8E4E66D629703D9C00FD19FC /* HomeNotesScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66D529703D9C00FD19FC /* HomeNotesScreen.storyboard */; };
 		8E4E66D82970411C00FD19FC /* TabbarScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E66D72970411C00FD19FC /* TabbarScreen.storyboard */; };
@@ -71,8 +69,6 @@
 		8E4E66C729703B9F00FD19FC /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		8E4E66CB29703D2800FD19FC /* HomePlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlannerViewController.swift; sourceTree = "<group>"; };
 		8E4E66CD29703D3800FD19FC /* HomePlannerScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePlannerScreen.storyboard; sourceTree = "<group>"; };
-		8E4E66CF29703D5900FD19FC /* HomeHabitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHabitsViewController.swift; sourceTree = "<group>"; };
-		8E4E66D129703D6B00FD19FC /* HomeHabitsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeHabitsScreen.storyboard; sourceTree = "<group>"; };
 		8E4E66D329703D8800FD19FC /* HomeNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNotesViewController.swift; sourceTree = "<group>"; };
 		8E4E66D529703D9C00FD19FC /* HomeNotesScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeNotesScreen.storyboard; sourceTree = "<group>"; };
 		8E4E66D72970411C00FD19FC /* TabbarScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabbarScreen.storyboard; sourceTree = "<group>"; };
@@ -177,8 +173,6 @@
 				8E4E66B429702F8900FD19FC /* Tabbar */,
 				8E4E66B529702F9E00FD19FC /* HomePlanner */,
 				8E4E66D92971593500FD19FC /* AddTask */,
-				8E4E66B629702FAB00FD19FC /* HomeHabits */,
-				8E4E66DA2971594700FD19FC /* AddHabit */,
 				8E4E66B729702FB800FD19FC /* HomeNotes */,
 				8E4E66DB2971595500FD19FC /* AddNote */,
 			);
@@ -271,15 +265,6 @@
 			path = HomePlanner;
 			sourceTree = "<group>";
 		};
-		8E4E66B629702FAB00FD19FC /* HomeHabits */ = {
-			isa = PBXGroup;
-			children = (
-				8E4E66CF29703D5900FD19FC /* HomeHabitsViewController.swift */,
-				8E4E66D129703D6B00FD19FC /* HomeHabitsScreen.storyboard */,
-			);
-			path = HomeHabits;
-			sourceTree = "<group>";
-		};
 		8E4E66B729702FB800FD19FC /* HomeNotes */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,13 +290,6 @@
 				8E4FAD5229925BF500F9820A /* AddTaskScreen.storyboard */,
 			);
 			path = AddTask;
-			sourceTree = "<group>";
-		};
-		8E4E66DA2971594700FD19FC /* AddHabit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AddHabit;
 			sourceTree = "<group>";
 		};
 		8E4E66DB2971595500FD19FC /* AddNote */ = {
@@ -439,7 +417,6 @@
 			files = (
 				8E4E66C32970370F00FD19FC /* NotesScreen.storyboard in Resources */,
 				8EBFE40229754476004B677B /* HomeNotesCollectionViewCell.xib in Resources */,
-				8E4E66D229703D6B00FD19FC /* HomeHabitsScreen.storyboard in Resources */,
 				8E4E66D82970411C00FD19FC /* TabbarScreen.storyboard in Resources */,
 				8E4FAD642992840E00F9820A /* TasksTableViewCell.xib in Resources */,
 				8E4E66DF2971599900FD19FC /* AddNoteScreen.storyboard in Resources */,
@@ -518,7 +495,6 @@
 				8E4E66E129716E0500FD19FC /* StringOptional+Extension.swift in Sources */,
 				8E4E66B929702FFF00FD19FC /* PlannerViewController.swift in Sources */,
 				8E4E66B32970280400FD19FC /* UINavigation+ViewControllerExtension.swift in Sources */,
-				8E4E66D029703D5900FD19FC /* HomeHabitsViewController.swift in Sources */,
 				8E4FAD5F29927C9A00F9820A /* Task+CoreDataClass.swift in Sources */,
 				8E4E66DD2971598800FD19FC /* AddNoteViewController.swift in Sources */,
 				8E4FAD5129925BDF00F9820A /* AddTaskViewController.swift in Sources */,
